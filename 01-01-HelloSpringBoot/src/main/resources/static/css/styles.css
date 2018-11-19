@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+h1 {color: rgb(8, 8, 8); font-weight: 800;}
+body {
+	background-color:#220707; 
+	
+	}
+h1, h2, h3, h4, h5, h6 {font-family: 'Baloo Bhaijaan', cursive;;}
+
+.container {
+	background:#e5d3d3;
+}
+
+
+.footer {
+	position:relative;
+	width:100%;
+	height:500px;
+	display: block;
+	
+	}
+
+
+.banner {
+	height: 200px;
+    width: 10%;
+
+}
+
+
+.btn-outline-info{
+    color: #dae6d3;
+    background-color: #124d1f;
+    border-color: #dae6d3;
+}
+
+
+
+.article-third-left{
+	width:30%;
+	float: left;
+	margin-right:5%;
+	margin-top:20px;
+}
+.article-third-right{
+	width:30%;
+	float: left;
+	margin-top:20px;
+}
+
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:100%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
