@@ -4,16 +4,7 @@ public class DwarfsAndDwarves {
 
 	public static void main(String[] args) {
 	
-        /*
-        String[] dwarfs = {"Sneezy", "Bashful", "Dopey", "Sleepy", "Happy", "Grumpy", "Doc"};
-        for (String s: dwarfs) {           
-        	System.out.println(s); 
-        }     
-        String[] dwarves  = {"Dwalin", "Balin", "Ori", "Dori", "Nori", "Bifur", "Bofur", "Kili", "Fili", "Oin", "Gloin", "Bombur", "Thorin "};
-        for (String s: dwarves) {           
-        	System.out.println(s); 
-        }
-        */
+  
 
 		ArrayList<String> dwarfs = new ArrayList<String>();
 		dwarfs.add("Sneezy");
