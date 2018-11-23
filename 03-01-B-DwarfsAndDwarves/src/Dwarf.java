@@ -9,6 +9,8 @@ public class Dwarf {
 		super();
 	}
 	
+	//This is a change for git
+	
 	public Dwarf(String name, String author, String image) {
 		super();
 		this.name = name;
