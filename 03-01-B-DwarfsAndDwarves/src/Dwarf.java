@@ -1,4 +1,4 @@
-
+//This is a new comment form github.com
 public class Dwarf {
 	
 	private String name;
