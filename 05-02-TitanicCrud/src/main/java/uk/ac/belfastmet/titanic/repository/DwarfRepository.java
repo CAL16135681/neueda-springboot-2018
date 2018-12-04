@@ -2,18 +2,18 @@ package uk.ac.belfastmet.titanic.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import uk.ac.belfastmet.titanic.domain.Dwarf;
+import uk.ac.belfastmet.titanic.domain.Titanic;
 
-public interface DwarfRepository extends CrudRepository<Dwarf, Integer> {
+public interface DwarfRepository extends CrudRepository<Titanic, Integer> {
 
 	
-	Iterable<Dwarf> findByAuthor(String author);
+	Iterable<Titanic> findByAuthor(String author);
 
-	Dwarf findByDwarfId(Integer dwarfId);
+	Titanic findByDwarfId(Integer dwarfId);
 
-	Iterable<Dwarf> findByName(String name);
+	Iterable<Titanic> findByName(String name);
 
-	Iterable<Dwarf> findByNameAndAuthor(String name, String author);
+	Iterable<Titanic> findByNameAndAuthor(String name, String author);
 
 	
 }

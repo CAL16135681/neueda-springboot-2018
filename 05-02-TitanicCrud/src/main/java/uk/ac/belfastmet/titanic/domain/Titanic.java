@@ -5,23 +5,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Dwarf {
+public class Titanic {
 	
 	@Id
 	@GeneratedValue
-	private Integer dwarfId;
+	private Integer passengerid;
+	private String survived;
+	private String pclass;
 	private String name;
-	private String author;
-	private String image;
 	
 
-	public Dwarf() {
+	public Titanic() {
 		super();
 	}
 
 	
 
-	public Dwarf(String name, String author, String image) {
+	public Titanic(String name, String author, String image) {
 		super();
 		this.name = name;
 		this.author = author;

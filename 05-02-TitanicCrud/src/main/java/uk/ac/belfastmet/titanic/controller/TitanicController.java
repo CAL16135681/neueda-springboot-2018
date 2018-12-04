@@ -6,17 +6,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import uk.ac.belfastmet.titanic.domain.Dwarf;
+import uk.ac.belfastmet.titanic.domain.Titanic;
 import uk.ac.belfastmet.titanic.repository.DwarfRepository;
 import uk.ac.belfastmet.titanic.service.DwarfService;
 
 @Controller
 @RequestMapping
-public class DwarfController {
+public class TitanicController {
 
 	DwarfRepository dwarfRepository; 
 
-	public DwarfController(DwarfRepository dwarfRepository) {
+	public TitanicController(DwarfRepository dwarfRepository) {
 		super();
 		this.dwarfRepository = dwarfRepository;
 	}

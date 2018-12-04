@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import uk.ac.belfastmet.titanic.domain.Dwarf;
+import uk.ac.belfastmet.titanic.domain.Titanic;
 import uk.ac.belfastmet.titanic.repository.DwarfRepository;
 import uk.ac.belfastmet.titanic.service.DwarfService;
 
