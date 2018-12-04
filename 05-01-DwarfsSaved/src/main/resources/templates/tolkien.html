@@ -18,7 +18,7 @@
 <!-- nav bar link to nav.html -->
 	<nav th:replace="layouts/nav :: navFragment">
 	</nav>
-	  
+
 <!--  table  ../static/  -->
 <h2>Disney Dwarfs</h2>
 	<table class ="table table-striped">
@@ -27,7 +27,7 @@
 			<th>Author</th>
 			<th>Image</th>
 		</thead>
-		
+
 		<tbody>
 			<tr th:each="dwarf: ${tolkiendwarfs}">
 				<td th:text="${dwarf.name}">Happy</td>
@@ -35,7 +35,7 @@
 				<td> <img src="../static/img/Happy.png" th:src="@{/img/}+${dwarf.image}"></img></td>
 			</tr>
 		</tbody>
-		
+
 	</table>	
 
 <!--  blue letters  -->	
