@@ -13,34 +13,47 @@ public class Titanic {
 	private String survived;
 	private String pclass;
 	private String name;
+	private String sex;
+	private Integer age;
 	
-
+	
 	public Titanic() {
 		super();
 	}
 
-	
-
-	public Titanic(String name, String author, String image) {
+	public Titanic(Integer passengerid, String survived, String pclass, String name, String sex, Integer age) {
 		super();
+		this.passengerid = passengerid;
+		this.survived = survived;
+		this.pclass = pclass;
 		this.name = name;
-		this.author = author;
-		this.image = image;
+		this.sex = sex;
+		this.age = age;
 	}
 
-
-
-	public Integer getDwarfId() {
-		return dwarfId;
+	public Integer getPassengerid() {
+		return passengerid;
 	}
 
-
-
-	public void setDwarfId(Integer dwarfId) {
-		this.dwarfId = dwarfId;
+	public void setPassengerid(Integer passengerid) {
+		this.passengerid = passengerid;
 	}
 
+	public String getSurvived() {
+		return survived;
+	}
 
+	public void setSurvived(String survived) {
+		this.survived = survived;
+	}
+
+	public String getPclass() {
+		return pclass;
+	}
+
+	public void setPclass(String pclass) {
+		this.pclass = pclass;
+	}
 
 	public String getName() {
 		return name;
@@ -50,23 +63,20 @@ public class Titanic {
 		this.name = name;
 	}
 
-	public String getAuthor() {
-		return author;
+	public String getSex() {
+		return sex;
 	}
 
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
 
-	public String getImage() {
-		return image;
+	public Integer getAge() {
+		return age;
 	}
 
-	public void setImage(String image) {
-		this.image = image;
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 	
-	
-	
-
 }

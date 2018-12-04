@@ -8,53 +8,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import uk.ac.belfastmet.titanic.domain.Titanic;
-import uk.ac.belfastmet.titanic.repository.DwarfRepository;
-import uk.ac.belfastmet.titanic.service.DwarfService;
+import uk.ac.belfastmet.titanic.repository.TitanicRepository;
 
 @Controller
 @RequestMapping
 public class SearchController {
 
-	DwarfRepository dwarfRepository; 
+	TitanicRepository titanicRepository; 
 
 
 
-	public SearchController(DwarfRepository dwarfRepository) {
+	public SearchController(TitanicRepository titanicRepository) {
 		super();
-		this.dwarfRepository = dwarfRepository;
+		this.titanicRepository = titanicRepository;
 	}
-
+	
 	@GetMapping("/searchid")
-	public String searchId(@RequestParam("id") Integer dwarfId, Model model) {
+	public String passengerid(@RequestParam("id") Integer passengerid, Model model) {
 		model.addAttribute("pageTitle", "Search");
-		model.addAttribute("dwarfs",this.dwarfRepository.findByDwarfId(dwarfId));
-		return "dwarfPage";
+		model.addAttribute("titanic",this.titanicRepository.findBypassengerid(passengerid));
+		return "passengersPage";
 	}
 
-	
-	@GetMapping("/searchname")
-	public String serachName (@RequestParam("name") String name, Model model) {
-		model.addAttribute("pageTitle", "Search!");
-		model.addAttribute("dwarfs",this.dwarfRepository.findByName(name));
-		return "dwarfPage";
-	}
-	
-	@GetMapping("/searchauthor")
-	public String searchAuthor(@RequestParam("author") String author, Model model) {
-		model.addAttribute("pateTitle", "Search!");
-		model.addAttribute("dwarfs", this.dwarfRepository.findByAuthor(author));
-		return "dwarfPage";
-	}
-	
-	@GetMapping("/searchnameauthor")
-	public String searchAuthor(@RequestParam("name") String name, @RequestParam("author") String author, Model model) {
-		model.addAttribute("pateTitle", "Search!");
-		model.addAttribute("dwarfs", this.dwarfRepository.findByNameAndAuthor(name, author));
-		return "dwarfPage";
-	}
-	
-	
-	
-	
-	
+
 }

@@ -23,16 +23,18 @@
 <h2>Disney Dwarfs</h2>
 	<table class ="table table-striped">
 		<thead>
-			<th>Name</th>
-			<th>Author</th>
-			<th>Image</th>
+			<th>passengerid</th>
+			<th>survived</th>
+			<th>pclass</th>
+			<th>name</th>
+			<th>sex</th>
+			<th>age</th>
 		</thead>
 		
 		<tbody>
-			<tr th:each="dwarf: ${dwarfs}">
-				<td th:text="${dwarf.name}">Happy</td>
-				<td th:text="${dwarf.author}">Disney</td>
-				<td> <img src="../static/img/Happy.png" th:src="@{/img/}+${dwarf.image}"></img></td>
+			<tr th:each="titanic: ${titanic}">
+				<td th:text="${titanic.passengerid}"></td>
+				<td th:text="${titanic.survived}"></td>
 			</tr>
 		</tbody>
 		

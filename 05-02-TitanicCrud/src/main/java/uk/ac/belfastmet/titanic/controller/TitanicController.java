@@ -7,36 +7,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import uk.ac.belfastmet.titanic.domain.Titanic;
-import uk.ac.belfastmet.titanic.repository.DwarfRepository;
-import uk.ac.belfastmet.titanic.service.DwarfService;
+import uk.ac.belfastmet.titanic.repository.TitanicRepository;
+
 
 @Controller
 @RequestMapping
 public class TitanicController {
 
-	DwarfRepository dwarfRepository; 
+	TitanicRepository dwarfRepository; 
 
-	public TitanicController(DwarfRepository dwarfRepository) {
+	public TitanicController(TitanicRepository dwarfRepository) {
 		super();
 		this.dwarfRepository = dwarfRepository;
 	}
 
 
-	@GetMapping("/tolkien")
+	@GetMapping("/passengersPage")
 	public String disney(Model model) {
-		
-		
-		model.addAttribute("tolkiendwarfs",this.dwarfRepository.findByAuthor("Tolkien"));
-		return "tolkien";
+		return "passengersPage";
 	}
 
 
-	@GetMapping("/disney")
-	public String tolkien(Model model) {
-		
-		
-		model.addAttribute("disneydwarfs",this.dwarfRepository.findByAuthor("Disney"));
-		return "disney";
-	}
+	
 	
 }
