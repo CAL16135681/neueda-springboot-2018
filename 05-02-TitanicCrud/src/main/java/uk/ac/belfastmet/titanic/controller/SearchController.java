@@ -44,7 +44,22 @@ public class SearchController {
 		return "passengersPage";
 	}
 	
+	@GetMapping("/searchsex")
+	public String sex(@RequestParam("sex") String sex, Model model) {
+		model.addAttribute("pageTitle", "Search");
+		model.addAttribute("titanic",this.titanicRepository.findBySex(sex));
+		return "passengersPage";
+	}	
 	
+	
+	@GetMapping("/searchage")
+	public String age(@RequestParam("age") Integer age, Model model) {
+		model.addAttribute("pageTitle", "Search");
+		model.addAttribute("titanic",this.titanicRepository.findByAge(age));
+		return "passengersPage";
+	}	
+	
+
 	
 
 
