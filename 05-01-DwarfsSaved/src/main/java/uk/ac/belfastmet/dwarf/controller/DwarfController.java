@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import uk.ac.belfastmet.dwarf.domain.Dwarf;
@@ -32,11 +33,26 @@ public class DwarfController {
 
 
 	@GetMapping("/disney")
-	public String tolkien(Model model) {
+	public String tolkien(Model model) { 
 		
 		
 		model.addAttribute("disneydwarfs",this.dwarfRepository.findByAuthor("Disney"));
 		return "disney";
 	}
+	
+	//<!-- paso 3, lo puse aqui debajo-->
+	@GetMapping("/view/{dwarfId}")
+	public String viewDwarf(@PathVariable("dwarfId") Integer dwarfId,  Model model) { 
+		model.addAttribute("pageTitle", "View");
+		model.addAttribute("dwarf",this.dwarfRepository.findByDwarfId(dwarfId));
+		return "viewDwarf";
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 }

@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Titanic Home</title>
+<title>Dwarf Home</title>
 
 </head>
 <body>
@@ -20,42 +20,47 @@
 	</nav>
 	  
 <!--  table  ../static/  -->
-<h2>Titanic</h2>
+<h2>Dwarfs</h2>
 	<table class ="table table-striped">
 		<thead>
-			<th>passengerid</th>
-			<th>survived</th>
-			<th>pclass</th>
-			<th>name</th>
-			<th>sex</th>
-			<th>age</th>
-
-			<th>CRUD</th>					 <!-- step1  -->
+			<tr>
+				<th>Column</th>
+				<th>Value</th>
+			</tr>					
 		</thead>
 		
 		<tbody>
-			<tr th:each="titanic: ${titanic}">
-				<td th:text="${titanic.passengerid}"></td>
-				<td th:text="${titanic.survived == True} ? 'Yes' : 'No' "></td>
-				<td th:text="${titanic.pclass}"></td>
-				<td th:text="${titanic.name}"></td>
-				<td th:text="${titanic.sex}"></td>
-				<td th:text="${titanic.age}"></td>
-				<td><a href="#" th:href="@{/view/} + ${titanic.passengerid}">More Info</a></td>						 <!-- step1  -->
+			<tr>
+				<td>Dwarf ID</td> <!-- 2, -->
+				<td th:text="${dwarf.dwarfId}"></td>
+			</tr>
+			<tr>
+				<td>Name</td> 
+				<td th:text="${dwarf.name}"></td>
+			</tr>
+			<tr>
+				<td>Author</td> 
+				<td th:text="${dwarf.author}"></td>
+			</tr>
+			<tr>
+				<td>Image</td> 
+				<td th:text="${dwarf.image}"></td>
 			</tr>
 		</tbody>
 		
 	</table>	
-
 <!--  blue letters  -->	
 	<p><a href="/">Home</a></p> 
-
+	<p><a href="/disney">Disney</a></p>
+	<p><a href="/tolkien">Tolkien</a></p>
 	
 <!--  blue nav bar  -->
 	<div class="btn-group btn-group-justified"> 
 	    <a href="/" class="btn btn-primary">Home</a>
-
+	    <a href="/tolkien" class="btn btn-primary">Tokien</a>
+	    <a href="/disney" class="btn btn-primary">Disney</a>
 	</div>
+
 </div> <!--  close container  -->
 </body>
 </body>

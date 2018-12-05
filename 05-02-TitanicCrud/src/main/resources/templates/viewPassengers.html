@@ -23,29 +23,41 @@
 <h2>Titanic</h2>
 	<table class ="table table-striped">
 		<thead>
-			<th>passengerid</th>
-			<th>survived</th>
-			<th>pclass</th>
-			<th>name</th>
-			<th>sex</th>
-			<th>age</th>
-
-			<th>CRUD</th>					 <!-- step1  -->
+			<tr>
+				<th>Column</th>
+				<th>Value</th>
+			</tr>					
 		</thead>
 		
 		<tbody>
-			<tr th:each="titanic: ${titanic}">
+			<tr>
+				<td>Passenger ID</td> <!-- 2, -->
 				<td th:text="${titanic.passengerid}"></td>
-				<td th:text="${titanic.survived == True} ? 'Yes' : 'No' "></td>
-				<td th:text="${titanic.pclass}"></td>
-				<td th:text="${titanic.name}"></td>
-				<td th:text="${titanic.sex}"></td>
-				<td th:text="${titanic.age}"></td>
-				<td><a href="#" th:href="@{/view/} + ${titanic.passengerid}">More Info</a></td>						 <!-- step1  -->
 			</tr>
+			<tr>
+				<td>Survived</td> 
+				<td th:text="${titanic.survived}"></td>
+			</tr>
+			<tr>
+				<td>Class</td> 
+				<td th:text="${titanic.pclass}"></td>
+			</tr>
+			<tr>
+				<td>Name</td> 
+				<td th:text="${titanic.name}"></td>
+			</tr>
+			<tr>
+				<td>Sex</td> 
+				<td th:text="${titanic.sex}"></td>
+			</tr>
+			<tr>
+				<td>Age</td> 
+				<td th:text="${titanic.age}"></td>
+			</tr>
+			
 		</tbody>
 		
-	</table>	
+	</table>
 
 <!--  blue letters  -->	
 	<p><a href="/">Home</a></p> 
