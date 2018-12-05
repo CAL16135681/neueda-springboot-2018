@@ -26,6 +26,7 @@
 			<th>Name</th>
 			<th>Author</th>
 			<th>Image</th>
+			<th>CRUD</th> <!-- step1  -->
 		</thead>
 		
 		<tbody>
@@ -33,6 +34,7 @@
 				<td th:text="${dwarf.name}">Happy</td>
 				<td th:text="${dwarf.author}">Disney</td>
 				<td> <img src="../static/img/Happy.png" th:src="@{/img/}+${dwarf.image}"></img></td>
+				<td><a href="">View</a></td> <!-- step1  -->
 			</tr>
 		</tbody>
 		

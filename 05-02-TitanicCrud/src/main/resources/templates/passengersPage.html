@@ -29,12 +29,23 @@
 			<th>name</th>
 			<th>sex</th>
 			<th>age</th>
+			<th>SibSp</th>
+			<th>Parch</th>
+			<th>Ticket</th>
+			<th>Fare</th>
+			<th>Cabin</th>
+			<th>Embarked</th>
 		</thead>
 		
 		<tbody>
 			<tr th:each="titanic: ${titanic}">
 				<td th:text="${titanic.passengerid}"></td>
-				<td th:text="${titanic.survived}"></td>
+				<td th:text="${titanic.survived == True} ? 'Yes' : 'No' "></td>
+				<td th:text="${titanic.pclass}"></td>
+				<td th:text="${titanic.name}"></td>
+				<td th:text="${titanic.sex}"></td>
+				<td th:text="${titanic.age}"></td>
+				
 			</tr>
 		</tbody>
 		

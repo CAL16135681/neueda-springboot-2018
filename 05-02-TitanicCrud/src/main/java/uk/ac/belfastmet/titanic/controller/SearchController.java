@@ -29,6 +29,23 @@ public class SearchController {
 		model.addAttribute("titanic",this.titanicRepository.findBypassengerid(passengerid));
 		return "passengersPage";
 	}
+	
+	@GetMapping("/searchsurvived")
+	public String survived(@RequestParam("survived") String survived, Model model) {
+		model.addAttribute("pageTitle", "Search");
+		model.addAttribute("titanic",this.titanicRepository.findBysurvived(survived));
+		return "passengersPage";
+	}
+	
+	@GetMapping("/searchpclass")
+	public String pclass(@RequestParam("pclass") String pclass, Model model) {
+		model.addAttribute("pageTitle", "Search");
+		model.addAttribute("titanic",this.titanicRepository.findByPclass(pclass));
+		return "passengersPage";
+	}
+	
+	
+	
 
 
 }
