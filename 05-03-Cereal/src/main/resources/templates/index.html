@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:thymeleaf.org">
+<head>
+
+<LINK REL=StyleSheet HREF="css/style.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Cereal Home</title>
+
+</head>
+<body>
+<div class="container">
+
+<!-- nav bar link to nav.html -->
+	<nav th:replace="layouts/nav :: navFragment">
+	</nav>
+	  
+<!--  text  -->	
+	<h3>Cereals</h3>
+	<p></p>
+
+<p><a href="/edit"></a></p>
+<p><a href="/add"></a></p>
+<!--  Search by  -->	
+
+
+
+
+<!--  blue letters  -->	
+	<p><a href="/">Home</a></p> 
+
+	
+<!--  blue nav bar  -->
+	<div class="btn-group btn-group-justified"> 
+	    <a href="/" class="btn btn-primary">Home</a>
+
+	</div>
+</div> <!--  close container  -->
+</body>
+</html>

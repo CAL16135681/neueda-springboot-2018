@@ -1,7 +1,17 @@
 package uk.ac.belfastmet.cereal.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
+@Entity
+
+
 public class Cereal {
 	
+	@Id
+	@GeneratedValue
 	private Integer cerealid;
 	private String manufacturer;
 	private String cereal;
