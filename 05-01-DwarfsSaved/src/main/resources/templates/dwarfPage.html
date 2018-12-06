@@ -20,7 +20,9 @@
 	</nav>
 	  
 <!--  table  ../static/  -->
-<h2>Disney Dwarfs</h2>
+<h2>Dwarfs</h2>
+
+
 	<table class ="table table-striped">
 		<thead>
 			<th>Name</th>
@@ -34,7 +36,7 @@
 				<td th:text="${dwarf.name}">Happy</td>
 				<td th:text="${dwarf.author}">Disney</td>
 				<td> <img src="../static/img/Happy.png" th:src="@{/img/}+${dwarf.image}"></img></td>
-				<td><a href="#" th:href="@{/view/} + ${dwarf.dwarfId}">View</a></td>						 <!-- step1  -->
+				<td><a href="#" th:href="@{/view/} + ${dwarf.dwarfId}">View</a></td>	<!-- step1  -->
 			</tr>
 		</tbody>
 		
