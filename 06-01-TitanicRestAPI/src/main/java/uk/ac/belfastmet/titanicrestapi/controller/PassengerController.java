@@ -26,7 +26,7 @@ public class PassengerController {
 		this.passengerRepository = passengerRepository;
 	}
 
-	@GetMapping("passengers")
+	@GetMapping("passengers")	//////////////////////////////////////////////////////////////////////////////////
 	public Iterable<Passenger> getAllPassengers() {
 	
 			return this.passengerRepository.findAll();

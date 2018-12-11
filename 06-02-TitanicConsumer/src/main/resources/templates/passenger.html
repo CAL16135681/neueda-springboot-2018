@@ -40,11 +40,16 @@
 				<td th:text="${passenger.sex}">Sex</td>
 				<td th:text="${passenger.age}">Age</td>
 				
-				
-				
-				
+				<td><a class="btn btn-primary" href="#"
+							th:href="@{/view/} + ${passenger.passengerId}">View</a><br />
+						<br /> <a class="btn btn-success" href="#"
+							th:href="@{/edit/} + ${passenger.passengerId}">Edit</a><br />
+						<br /> <a class="btn btn-danger" href="#"
+							th:href="@{/delete/} + ${passenger.passengerId}">Delete</a></td>
 				
 			</tr>
+			
+			
 		</tbody>
 		
 	</table>	

@@ -1,4 +1,4 @@
-package uk.ac.belfastmet.domain;
+package uk.ac.belfastmet.titanicconsumer.domain;
 
 
 public class Passenger {

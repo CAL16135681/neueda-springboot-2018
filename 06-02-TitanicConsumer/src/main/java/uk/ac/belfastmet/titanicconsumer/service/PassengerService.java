@@ -1,8 +1,8 @@
-package uk.ac.belfastmet.service;
+package uk.ac.belfastmet.titanicconsumer.service;
 
 import java.util.ArrayList;
 
-import uk.ac.belfastmet.domain.Passenger;
+import uk.ac.belfastmet.titanicconsumer.domain.Passenger;
 
 public interface PassengerService {
 	
@@ -11,8 +11,6 @@ public interface PassengerService {
 	public Passenger add(Passenger passenger);
 	public Passenger update(Passenger passenger);
 	public void delete(Integer passengerId);
-	
-	
 	
 
 }
