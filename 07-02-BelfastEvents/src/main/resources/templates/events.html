@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Titanic Home</title>
+<title>Weather Home</title>
 
 </head>
 <body>
@@ -19,26 +19,37 @@
 	<nav th:replace="layouts/nav :: navFragment">
 	</nav>
 	  
-<!--  text  -->	
-	<h3>TITANIC</h3>
-
-<p><a href="/edit"></a></p>
-<p><a href="/add"></a></p>
-<!--  Search by  -->	
+<!--  table  ../static/  -->
+<h2>Weather by location</h2>
 
 
+	<table class ="table table-striped">
+		<thead>
+			<tr>	
+				<th>City</th>
+				<th>Weather</th>
+				<th>Temperature in °C</th>
+				<th>Image</th>				 <!-- step1  -->
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				<td th:text="${todaysevent.allEvents.event.identifier}"> City Name</td>
 
-<!--  blue letters  -->	
-	<p><a href="/">Home</a></p> 
-	<p><a href="/disney"></a></p>
-	<p><a href="/tolkien"></a></p>
+			</tr>		
+		</tbody>
+	</table>	
+
+<!--  blue letters  3  -->	
+	<nav th:replace="layouts/nav :: navFragment3">
+	</nav>
 	
-<!--  blue nav bar  -->
-	<div class="btn-group btn-group-justified"> 
-	    <a href="/" class="btn btn-primary">Home</a>
-	    <a href="/tolkien" class="btn btn-primary"></a>
-	    <a href="/disney" class="btn btn-primary"></a>
-	</div>
+	<!--  blue nav bar  2 -->
+	<nav th:replace="layouts/nav :: navFragment2">
+	</nav>
+	
 </div> <!--  close container  -->
+</body>
 </body>
 </html>

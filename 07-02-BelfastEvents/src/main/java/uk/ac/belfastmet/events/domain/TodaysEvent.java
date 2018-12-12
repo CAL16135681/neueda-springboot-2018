@@ -10,7 +10,12 @@ public class TodaysEvent {
 	
 	private AllEvents allEvents;
 	
-	
+	public String toString() {
+		
+		
+		return allEvents.toString() ;
+		
+	}
 	
 	
 

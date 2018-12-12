@@ -1,47 +1,22 @@
 package uk.ac.belfastmet.events.domain;
 
+import java.util.ArrayList;
+
 import lombok.Data;
 
 @Data
 public class AllEvents {
 	
-	private String identifier;
-	private String url;
-	private String title;
-	private String startDate;
-	private String endDate;
-	private String time;
-	private String venue;
-	private String venueUrl;
-	private String image;
-	private String audience;
-	private String theme;
-	private String cost;
-	private String content;
+	private ArrayList<Event> allEvents;
 	
-	
-	
-	
-	public String toString() {
-		
-		String allevents = "\n" + this.getIdentifier() + ", " 
-				+ this.getUrl() + ", " 
-				+ this.getTitle() + ", " 
-				+ this.getStartDate() + ", " 
-				+ this.getEndDate() + ", " 
-				+ this.getTime() + ", " 
-				+ this.getVenue() + ", " 
-				+ this.getVenueUrl() + ", " 
-				+ this.getImage() + ", " 
-				+ this.getAudience() + ", " 
-				+ this.getTheme() + ", " 
-				+ this.getCost() + ", "
-				+ this.getContent() + "\n";
-		
-		
-		return allevents ;
-		
+	public Event getEventWithId(String identifier) {
+		for (int i = 0; i < this.allEvents.size(); i++) {
+			Event currentEvent = this.allEvents.get(i);
+			if ( currentEvent.getIdentifier().equals(identifier)) {
+				return currentEvent;
+			}
+		}
+		return null;
 	}
-	
-
 }
+	
