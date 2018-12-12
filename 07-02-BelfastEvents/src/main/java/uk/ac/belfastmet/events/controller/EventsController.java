@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 
+import uk.ac.belfastmet.events.domain.AllEvents;
 import uk.ac.belfastmet.events.domain.TodaysEvent;
 
 
@@ -22,23 +23,24 @@ public class EventsController {
 		return "home";
 	}
 	
-	@GetMapping("/events/{allEvents}")
-	public String belfast(@PathVariable("allevents") String location, Model model) {
+	@GetMapping("/events")
+	public String belfast(Model model) {
 		
 		//build for the 3 cities
 		String belfastEventsUrl="https://neueda-flask-bndouglas.c9users.io/belfast-events/api/";
-		RestTemplate restTemplate1 = new RestTemplate();
-		TodaysEvent todaysEvent = restTemplate1.getForObject(belfastEventsUrl, TodaysEvent.class);
+		RestTemplate restTemplate = new RestTemplate();
+		
+		AllEvents todaysEvent = restTemplate.getForObject(belfastEventsUrl, AllEvents.class);
 		
 		
 		
 		//slf4j-----morado y el rojo, q sea el slf4j (mirar arriba)
-		Logger logger = LoggerFactory.getLogger(TodaysEvent.class);
-		logger.info(todaysEvent.toString());
+//		Logger logger = LoggerFactory.getLogger(AllEvents.class);
+//		logger.info(todaysEvent.toString());
 		
 		
-					model.addAttribute("todaysEvent", todaysEvent);
-		return "event";
+		model.addAttribute("events", todaysEvent.getAllEvents());
+		return "events.html";
 		
 	}
 	

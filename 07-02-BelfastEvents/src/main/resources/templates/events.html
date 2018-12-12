@@ -26,18 +26,39 @@
 	<table class ="table table-striped">
 		<thead>
 			<tr>	
-				<th>City</th>
-				<th>Weather</th>
-				<th>Weather</th>
-				<th>Weather</th>
-				<th>Temperature in °C</th>
-				<th>Image</th>				 <!-- step1  -->
+				<th>identifier</th>
+		 <!-- step1 		//<th>url</th> -->
+				<th>title</th>
+				<th>startDate</th>
+				<th>endDate</th>
+				<th>time</th>
+				<th>venue</th>
+			<!-- step1 	<th>venueUrl</th>  -->
+				<th>image</th>
+			<!--	<th>audience</th>  -->
+				<th>theme</th>
+				<th>cost</th>	
+				<th>content</th>			 <!-- step1  -->
 			</tr>
 		</thead>
 		
 		<tbody>
 			<tr>
-				<td th:text="${todaysevent.allEvents.event.identifier}"> City Name</td>
+			<tr th:each="event : ${events}">
+				
+				<td th:text="${event.identifier}">identifier</td>
+			<!-- step1	//<td th:text="${event.url}">url</td>  -->
+				<td th:utext="${event.title}">title</td>
+				<td th:text="${event.startDate}">startDate</td>
+				<td th:text="${event.endDate}">endDate</td>
+				<td th:text="${event.time}">time</td>
+				<td th:text="${event.venue}">venue</td>
+			<!-- step1 	<td th:text="${event.venueUrl}">venueUrl</td>  -->
+				<td th:text="${event.image}">image</td>
+			<!--	<td th:text="${event.audience}">audience</td>  -->
+				<td th:text="${event.theme}">theme</td>
+				<td th:text="${event.cost}">cost</td>
+				<td th:utext="${event.content}">content</td>
 
 			</tr>		
 		</tbody>
