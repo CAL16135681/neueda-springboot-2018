@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http:thymeleaf.org">
 <head>
 
 <LINK REL=StyleSheet HREF="css/style.css">
@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Dwarf Home</title>
+<title>Weather Home</title>
 
 </head>
 <body>
@@ -18,37 +18,41 @@
 <!-- nav bar link to nav.html -->
 	<nav th:replace="layouts/nav :: navFragment">
 	</nav>
-
+	  
 <!--  table  ../static/  -->
-<h2>Disney Dwarfs</h2>
+<h2>Weather by location</h2>
+
+
 	<table class ="table table-striped">
 		<thead>
-			<th>Name</th>
-			<th>Author</th>
-			<th>Image</th>
-		</thead>
-
-		<tbody>
-			<tr th:each="dwarf: ${tolkiendwarfs}">
-				<td th:text="${dwarf.name}">Happy</td>  <!--  todaysweahter.weather.description     todaysweather.location.name	 -->
-				<td th:text="${dwarf.author}">Disney</td>
-				<td> <img src="../static/img/Happy.png" th:src="@{/img/}+${dwarf.image}"></img></td>
+			<tr>	
+				<th>City</th>
+				<th>Weather</th>
+				<th>Temperature in °C</th>
+				<th>Image</th>				 <!-- step1  -->
 			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				<td th:text="${todaysWeather.location.name}"> City Name</td>
+				<td th:text="${todaysWeather.weather.description}">Weather Description</td>
+				<td th:text="${todaysWeather.weather.temperature}"> Temperature</td>
+				<td><img src="" th:src="${todaysWeather.weather.image}"/><td>
+			</tr>		
 		</tbody>
-
+		
 	</table>	
 
-<!--  blue letters  -->	
-	<p><a href="/">Home</a></p> 
-	<p><a href="/disney">Disney</a></p>
-	<p><a href="/tolkien">Tolkien</a></p>
+<!--  blue letters  3  -->	
+	<nav th:replace="layouts/nav :: navFragment3">
+	</nav>
 	
-<!--  blue nav bar  -->
-	<div class="btn-group btn-group-justified"> 
-	    <a href="/" class="btn btn-primary">Home</a>
-	    <a href="/tolkien" class="btn btn-primary">Tokien</a>
-	    <a href="/disney" class="btn btn-primary">Disney</a>
-	</div>
+	<!--  blue nav bar  2 -->
+	<nav th:replace="layouts/nav :: navFragment2">
+	</nav>
+	
 </div> <!--  close container  -->
+</body>
 </body>
 </html>
